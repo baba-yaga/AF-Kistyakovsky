@@ -144,3 +144,57 @@ footer{color:#6d5a4f;font-size:13px;text-align:center;padding:26px 16px}
 .modal-body h3{font-family:var(--display);font-size:28px;color:var(--maroon);margin-top:0}
 .modal-body p{font-size:16px;line-height:1.6;color:var(--ink)}
 .modal-body img{max-width:100%;height:auto;border-radius:var(--radius);margin-bottom:15px}
+
+.son-popup-content {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  grid-template-columns: 1.05fr .95fr; /* Similar to .hero */
+}
+
+@media (max-width: 600px) {
+  .son-popup-content {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+  }
+}
+
+.son-popup-image {
+  max-width: 100%; /* Ensure image fits */
+}
+
+.son-popup-text h3 {
+  font-size: 28px; /* Adjust font size for modal */
+  margin-top: 0;
+}
+
+.son-popup-text .lead {
+  font-size: 16px;
+}
+
+.son-popup-text .facts {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.geni-link a {
+  color: var(--orange);
+  border-color: rgba(227, 127, 45, .28); /* A lighter orange border */
+  background: #fef7f0; /* A light background */
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border .18s ease;
+}
+
+.geni-link a:hover,
+.geni-link a:focus {
+  background: #fff; /* Lighter on hover */
+  border-color: var(--orange);
+  color: var(--orange);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(227, 127, 45, .22);
+}

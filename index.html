@@ -21,7 +21,7 @@
         <a href="#bio">Биография</a>
         <a href="#legacy">Наследие</a>
         <a href="#sons">Семья</a>
-        <a href="#works">Труды</a>
+        <a href="#sources">Источники</a>
       </nav>
     </div>
   </div>
@@ -52,7 +52,11 @@
               <span><strong>Про людей.</strong> Поддерживал гуманную тюремную реформу и помощь подросткам.</span>
             </li>
           </ul>
-
+          <p class="geni-link reveal">
+            <a href="https://www.geni.com/people/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D0%9A%D0%B8%D1%81%D1%82%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9/6000000018972375013" target="_blank" rel="noopener">
+              Посмотреть генеалогическое древо на Geni.com
+            </a>
+          </p>
         </div>
 
         <figure class="frame float sepia">
@@ -126,42 +130,42 @@
       </figure>
     <!--  <p style="color:var(--muted)">Фотографии семейного архива — пока без финальной сепии, но уже с нами.</p> -->
       <div class="sons">
-        <a class="son" href="#" data-son-id="vladimir">
+        <a class="son" href="#" data-son-id="Kistyakovsky_Vladimir_Alexandrovich" data-occupation="Химик, академик" data-known-for="Основатель электрохимии в России">
           <figure class="portrait sepia">
             <img src="assets/images/владимир.jpg" alt="Владимир Кистяковский" loading="lazy" />
           </figure>
           <h3 style="margin:10px 0 4px;font-size:18px">Владимир Кистяковский</h3>
           <small>1865-1952</small>
         </a>
-        <a class="son" href="#" data-son-id="bogdan">
+        <a class="son" href="#" data-son-id="Kistyakovsky_Bogdan_Alexandrovich" data-occupation="Философ, социолог, правовед" data-known-for="Один из авторов сборника «Вехи»">
           <figure class="portrait sepia">
             <img src="assets/images/богдан.jpg" alt="Богдан Кистяковский" loading="lazy" />
           </figure>
           <h3 style="margin:10px 0 4px;font-size:18px">Богдан Кистяковский</h3>
           <small>1868—1920</small>
         </a>
-        <a class="son" href="#" data-son-id="yuly">
+        <a class="son" href="#" data-son-id="Kistyakovsky_Yuly_Alexandrovich" data-occupation="Юрист, общественный деятель" data-known-for="Сын известного правоведа">
           <figure class="portrait sepia">
             <img src="assets/images/юлий.jpg" alt="Юлий Кистяковский" loading="lazy" />
           </figure>
           <h3 style="margin:10px 0 4px;font-size:18px">Юлий Кистяковский</h3>
           <small>1872-1920</small>
         </a>
-        <a class="son" href="#" data-son-id="alexander">
+        <a class="son" href="#" data-son-id="Kistyakovsky_Alexander_Alexandrovich" data-occupation="Юрист, общественный деятель" data-known-for="Сын известного правоведа">
           <figure class="portrait sepia">
             <img src="assets/images/александр.jpg" alt="Александр Кистяковский" loading="lazy" />
           </figure>
           <h3 style="margin:10px 0 4px;font-size:18px">Александр Кистяковский</h3>
           <small>1874-1923</small>
         </a>
-        <a class="son" href="#" data-son-id="boris">
+        <a class="son" href="#" data-son-id="Kistyakovsky_Boris_Alexandrovich" data-occupation="Философ, социолог, правовед" data-known-for="Автор работ по философии права и социологии">
           <figure class="portrait sepia">
             <img src="assets/images/борис.jpg" alt="Борис Кистяковский" loading="lazy" />
           </figure>
           <h3 style="margin:10px 0 4px;font-size:18px">Борис Кистяковский</h3>
           <small>1876-1940</small>
         </a>
-        <a class="son" href="#" data-son-id="igor">
+        <a class="son" href="#" data-son-id="Kistyakovsky_Igor_Alexandrovich" data-occupation="Юрист, государственный деятель" data-known-for="Министр внутренних дел Украинской Державы">
           <figure class="portrait sepia">
             <img src="assets/images/игорь.jpg" alt="Игорь Кистяковский" loading="lazy" />
           </figure>
@@ -171,12 +175,12 @@
       </div>
     </section>
 
-    <!-- Труды -->
-    <section id="works" class="section">
+    <!-- Источники -->
+    <section id="sources" class="section">
       <div class="paper">
         <div class="grain"></div>
         <div class="container" style="padding:22px 0">
-          <h2>Избранные труды</h2>
+          <h2>Источники</h2>
           <ul>
             <li><strong>Исследование о смертной казни</strong> (1867).</li>
             <li><strong>Элементарный учебник общего уголовного права</strong> (изд. 1877, 1882, 1891).</li>
@@ -210,41 +214,39 @@
         e.preventDefault(); // Prevent default link behavior
 
         const sonId = card.dataset.sonId; // Get the son's ID from data-son-id attribute
-        const sonPagePath = `assets/sons/${sonId}.html`;
+        const sonName = card.querySelector('h3').textContent;
+        const sonLifespan = card.querySelector('small').textContent;
+        const sonImageSrc = card.querySelector('img').getAttribute('src');
+        const sonImageAlt = card.querySelector('img').getAttribute('alt');
+        const sonOccupation = card.dataset.occupation;
+        const sonKnownFor = card.dataset.knownFor;
+        const fullPageLink = `${sonId}/index.html`;
 
-        try {
-          const response = await fetch(sonPagePath);
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          const html = await response.text();
+        modalBody.innerHTML = `
+          <div class="son-popup-content">
+            <div class="son-popup-text">
+              <h3 style="margin-top:.5rem">${sonName}</h3>
+              <p class="lead">${sonLifespan}</p>
+              <ul class="facts">
+                <li><span class="dot">•</span><span>Род занятий: ${sonOccupation}</span></li>
+                <li><span class="dot">•</span><span>Известен как: ${sonKnownFor}</span></li>
+              </ul>
+              <div class="cluster" style="margin-top:10px">
+                <a class="btn btn--primary" href="${fullPageLink}">Подробнее</a>
+              </div>
+            </div>
+            <figure class="frame sepia son-popup-image">
+              <img src="${sonImageSrc}" alt="${sonImageAlt}" />
+              <figcaption class="caption">${sonName} — портрет</figcaption>
+            </figure>
+          </div>
+        `;
 
-          // Create a temporary div to parse the fetched HTML
-          const tempDiv = document.createElement('div');
-          tempDiv.innerHTML = html;
-
-          // Extract the content from the <main> section of the son's page
-          const sonContent = tempDiv.querySelector('main').innerHTML;
-          modalBody.innerHTML = sonContent;
-
-          // Update modal title (optional, can be done by extracting from sonContent)
-          const sonTitle = tempDiv.querySelector('title').textContent;
-          sonModal.querySelector('.modal-content').setAttribute('aria-label', sonTitle);
-
-          sonModal.setAttribute('aria-hidden', 'false');
-          sonModal.classList.add('is-open');
-          document.body.style.overflow = 'hidden'; // Prevent scrolling body when modal is open
-
-          // Scroll to top of modal content
-          modalBody.scrollTop = 0;
-
-        } catch (error) {
-          console.error('Failed to load son details:', error);
-          modalBody.innerHTML = `<p>Не удалось загрузить информацию о ${sonId}. Пожалуйста, попробуйте еще раз.</p>`;
-          sonModal.setAttribute('aria-hidden', 'false');
-          sonModal.classList.add('is-open');
-          document.body.style.overflow = 'hidden';
-        }
+        sonModal.querySelector('.modal-content').setAttribute('aria-label', sonName);
+        sonModal.setAttribute('aria-hidden', 'false');
+        sonModal.classList.add('is-open');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling body when modal is open
+        modalBody.scrollTop = 0;
       });
     });
 
