@@ -59,8 +59,8 @@ body{
 .hero{display:grid;gap:28px;align-items:center;grid-template-columns:1.05fr .95fr}
 @media (max-width:980px){.hero{grid-template-columns:1fr}}
 .tag{display:inline-block;padding:6px 12px;border-radius:999px;
-  background:linear-gradient(135deg,var(--orange),var(--saffron));color:#24180f;
-  letter-spacing:.06em;text-transform:uppercase;font-size:12px;font-weight:800}
+  background:linear-gradient(135deg,var(--orange),var(--saffron));color:#ffffff;
+  letter-spacing:.06em;text-transform:uppercase;font-size:14px;font-weight:800}
 h1{font-size:40px;line-height:1.08;margin:.5rem 0 .25rem;color:var(--maroon);
   text-shadow:0 1px 0 rgba(255,255,255,.35);font-family:var(--display);
   font-weight:600;letter-spacing:.015em}
@@ -197,4 +197,42 @@ footer{color:#6d5a4f;font-size:13px;text-align:center;padding:26px 16px}
   color: var(--orange);
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(227, 127, 45, .22);
+}
+
+.family-info {
+  margin-top: 1.5rem;
+  padding-left: 26px; /* Align with other content */
+}
+
+.family-info p {
+  margin-bottom: 0.25rem; /* Reduced spacing */
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.family-info ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.25rem; /* Reduced spacing */
+  margin-bottom: 1rem;
+}
+
+.family-info li {
+  margin-bottom: 0.25rem;
+}
+
+.family-info li a {
+  color: var(--maroon); /* Use maroon for names */
+  text-decoration: none;
+  font-weight: normal;
+  display: inline-block; /* Needed for transform to work */
+  transition: transform .18s ease, box-shadow .18s ease, color .18s ease; /* Add transitions */
+}
+
+.family-info li a:hover,
+.family-info li a:focus {
+  color: var(--orange); /* Change color to orange on hover */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 4px 8px rgba(227, 127, 45, .15); /* Subtle shadow */
+  text-decoration: none; /* Remove underline on hover if shadow is present */
 }
