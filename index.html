@@ -17,6 +17,7 @@
     <div class="container nav-inner">
       <a class="brand" href="#page-top">А.&nbsp;Ф. Кистяковский</a>
       <nav class="nav-links" aria-label="Основное меню">
+        <a href="#era">Эпоха</a>
         <a href="#bio">Биография</a>
         <a href="#legacy">Наследие</a>
         <a href="#sons">Семья</a>
@@ -63,6 +64,18 @@
   </header>
 
   <main class="container">
+    <!-- Эпоха -->
+    <section id="era" class="section">
+      <div class="paper">
+        <div class="grain"></div>
+        <div class="container" style="padding:22px 26px">
+          <h2>Эпоха</h2>
+          <p>Между 1850 и 1885 годами мир пережил индустриальную революцию, рост железных дорог, телеграфа и капиталистической экономики, что ускорило урбанизацию и культурные связи. В России этот период ознаменован Крымской войной (1853–1856), Великими реформами Александра II, прежде всего отменой крепостного права (1861), реформой образования, суда и земского самоуправления.</p>
+          <p>Эти изменения стимулировали экономическое и культурное развитие городов, в том числе Киева, где активно строились предприятия, учебные заведения и железнодорожные линии (открытие железной дороги в 1868&nbsp;г.). После убийства Александра II (1881) началась реакция и усиление цензуры, что ограничило общественную жизнь, но Киев уже стал важным административным, промышленным и университетским центром Юго-Западного края Российской империи.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Биография + памятник -->
     <section id="bio" class="section cols">
       <article class="paper stack">
@@ -105,25 +118,56 @@
       </div>
     </section>
 
-    <!-- Широкий семейный портрет -->
-    <section class="section">
-      <figure class="paper frame sepia">
-        <img src="assets/images/Alexandra-Ivanovna_ps.jpg" alt="Александра Ивановна Кистяковская с шестью сыновьями" />
-        <figcaption class="caption">Александра&nbsp;Ивановна Кистяковская и сыновья: Богдан, Борис, Игорь, Владимир,  Юлий и Александр</figcaption>
-      </figure>
-    </section>
-
-    <!-- Карточки сыновей (плейсхолдеры) -->
     <section id="sons" class="section">
       <h2>Шесть сыновей — шесть историй</h2>
-      <p style="color:var(--muted)">Фотографии приведём к соотношению 4:5 и тонируем под сепию. Пока — плейсхолдеры.</p>
+      <figure class="paper frame sepia" style="margin-bottom:22px">
+        <img src="assets/images/alexandra_and_six_sons_ps.jpg" alt="Александра Ивановна Кистяковская с шестью сыновьями" />
+        <figcaption class="caption">Александра&nbsp;Ивановна Кистяковская и сыновья: Богдан, Борис, Игорь, Владимир, Юлий и Александр. Около 1900 года. </figcaption>
+      </figure>
+    <!--  <p style="color:var(--muted)">Фотографии семейного архива — пока без финальной сепии, но уже с нами.</p> -->
       <div class="sons">
-        <a class="son" href="#"><div class="ph">Фото</div><h3 style="margin:10px 0 4px;font-size:18px">Владимир  Кистяковский</h3><small>подпись / годы</small></a>
-        <a class="son" href="#"><div class="ph">Фото</div><h3 style="margin:10px 0 4px;font-size:18px"> Богдан Кистяковский</h3><small>подпись / годы</small></a>
-        <a class="son" href="#"><div class="ph">Фото</div><h3 style="margin:10px 0 4px;font-size:18px"> Борис  Кистяковский</h3><small>подпись / годы</small></a>
-        <a class="son" href="#"><div class="ph">Фото</div><h3 style="margin:10px 0 4px;font-size:18px"> Юлий Кистяковский</h3><small>подпись / годы</small></a>
-        <a class="son" href="#"><div class="ph">Фото</div><h3 style="margin:10px 0 4px;font-size:18px"> Александр Кистяковский</h3><small>подпись / годы</small></a>
-        <a class="son" href="#"><div class="ph">Фото</div><h3 style="margin:10px 0 4px;font-size:18px"> Игорь Кистяковский</h3><small>подпись / годы</small></a>
+        <a class="son" href="#">
+          <figure class="portrait sepia">
+            <img src="assets/images/владимир.jpg" alt="Владимир Кистяковский" loading="lazy" />
+          </figure>
+          <h3 style="margin:10px 0 4px;font-size:18px">Владимир Кистяковский</h3>
+          <small>1865-1952</small>
+        </a>
+        <a class="son" href="#">
+          <figure class="portrait sepia">
+            <img src="assets/images/богдан.jpg" alt="Богдан Кистяковский" loading="lazy" />
+          </figure>
+          <h3 style="margin:10px 0 4px;font-size:18px">Богдан Кистяковский</h3>
+          <small>1868—1920</small>
+        </a>
+        <a class="son" href="#">
+          <figure class="portrait sepia">
+            <img src="assets/images/юлий.jpg" alt="Юлий Кистяковский" loading="lazy" />
+          </figure>
+          <h3 style="margin:10px 0 4px;font-size:18px">Юлий Кистяковский</h3>
+          <small>1872-1920</small>
+        </a>
+        <a class="son" href="#">
+          <figure class="portrait sepia">
+            <img src="assets/images/александр.jpg" alt="Александр Кистяковский" loading="lazy" />
+          </figure>
+          <h3 style="margin:10px 0 4px;font-size:18px">Александр Кистяковский</h3>
+          <small>1874-1923</small>
+        </a>
+        <a class="son" href="#">
+          <figure class="portrait sepia">
+            <img src="assets/images/борис.jpg" alt="Борис Кистяковский" loading="lazy" />
+          </figure>
+          <h3 style="margin:10px 0 4px;font-size:18px">Борис Кистяковский</h3>
+          <small>1876-1940</small>
+        </a>
+        <a class="son" href="#">
+          <figure class="portrait sepia">
+            <img src="assets/images/игорь.jpg" alt="Игорь Кистяковский" loading="lazy" />
+          </figure>
+          <h3 style="margin:10px 0 4px;font-size:18px">Игорь Кистяковский</h3>
+          <small>1876-1940</small>
+        </a>
       </div>
     </section>
 
