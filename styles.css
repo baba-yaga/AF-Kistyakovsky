@@ -71,7 +71,8 @@ h1{font-size:40px;line-height:1.08;margin:.5rem 0 .25rem;color:var(--maroon);
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;
   text-decoration:none;font-weight:800;border:2px solid transparent;
   transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease,border .18s ease}
-.btn--primary{background:var(--ink);color:#fff;box-shadow:0 6px 14px rgba(42,30,25,.25)}
+.btn--primary{background:#4a4640;color:#fff;box-shadow:0 6px 16px rgba(0,0,0,.22);
+  border-color:rgba(255,255,255,.12)}
 .btn--primary:hover,.btn--primary:focus{background:linear-gradient(135deg,var(--orange),var(--saffron));
   color:#24180f;transform:translateY(-2px);box-shadow:0 10px 22px rgba(227,127,45,.35);border-color:var(--orange)}
 .btn--ghost{background:#f3e7d8;color:var(--ink);border-color:rgba(107,74,57,.25)}
@@ -81,6 +82,10 @@ h1{font-size:40px;line-height:1.08;margin:.5rem 0 .25rem;color:var(--maroon);
 .btn--link:hover,.btn--link:focus{background:#fff1ec;border-color:var(--maroon);
   color:var(--maroon);transform:translateY(-2px);box-shadow:0 8px 18px rgba(143,29,46,.22)}
 .btn:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+
+.paper.stack{display:flex;flex-direction:column;height:100%}
+.section-card{flex:1;display:flex;flex-direction:column;padding:22px 22px 8px}
+.section-cta{margin-top:auto;padding-top:18px;margin-bottom:12px}
 
 /* === Lists/Facts ========================================================= */
 .facts{display:grid;gap:12px;margin:14px 0 8px;padding:0;list-style:none}
@@ -162,6 +167,8 @@ footer{color:#6d5a4f;font-size:13px;text-align:center;padding:26px 16px}
   max-width: 100%; /* Ensure image fits */
 }
 
+.son-popup-text{display:flex;flex-direction:column;height:100%}
+.son-popup-text .cluster{margin-top:auto;padding-top:14px}
 .son-popup-text h3 {
   font-size: 28px; /* Adjust font size for modal */
   margin-top: 0;
@@ -176,25 +183,70 @@ footer{color:#6d5a4f;font-size:13px;text-align:center;padding:26px 16px}
   margin-bottom: 10px;
 }
 
-.geni-link a {
-  color: var(--orange);
-  border-color: rgba(227, 127, 45, .28); /* A lighter orange border */
-  background: #fef7f0; /* A light background */
-  padding: 12px 16px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 800;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border .18s ease;
+.btn--soft{
+  color:var(--orange);
+  border:2px solid rgba(227,127,45,.28);
+  background:#fef7f0;
+  padding:12px 16px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:800;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease,border .18s ease;
+}
+.btn--soft:hover,
+.btn--soft:focus{
+  background:#fff;
+  border-color:var(--orange);
+  color:var(--orange);
+  transform:translateY(-2px);
+  box-shadow:0 8px 18px rgba(227,127,45,.22);
 }
 
-.geni-link a:hover,
-.geni-link a:focus {
-  background: #fff; /* Lighter on hover */
-  border-color: var(--orange);
-  color: var(--orange);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(227, 127, 45, .22);
+.family-info {
+  margin-top: 1.5rem;
+  padding-left: 26px; /* Align with other content */
 }
+
+.family-info p {
+  margin-bottom: 0.25rem; /* Reduced spacing */
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.family-info ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.25rem; /* Reduced spacing */
+  margin-bottom: 1rem;
+}
+.family-info .cluster{margin-top:10px}
+
+.family-info li {
+  margin-bottom: 0.25rem;
+}
+
+.family-info li a {
+  color: var(--maroon); /* Use maroon for names */
+  text-decoration: none;
+  font-weight: normal;
+  display: inline-block; /* Needed for transform to work */
+  transition: transform .18s ease, box-shadow .18s ease, color .18s ease; /* Add transitions */
+}
+
+.family-info li a:hover,
+.family-info li a:focus {
+  color: var(--orange); /* Change color to orange on hover */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 4px 8px rgba(227, 127, 45, .15); /* Subtle shadow */
+  text-decoration: none; /* Remove underline on hover if shadow is present */
+}
+
+.resource-list{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.resource-list li{display:flex;align-items:flex-start;gap:10px}
+.resource-list .dot{line-height:1.4}
+.resource-list a{color:var(--maroon);text-decoration:none;transition:color .18s ease,transform .18s ease}
+.resource-list a:hover,.resource-list a:focus{color:var(--orange);transform:translateX(4px)}
