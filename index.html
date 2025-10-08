@@ -29,38 +29,52 @@
     <div class="paper">
       <div class="grain"></div>
       <div class="container hero">
-        <div>
-          <h1 class="reveal">Александр&nbsp;Фёдорович Кистяковский (1833–1885)</h1>
-          <p class="lead reveal">
-            Профессор права, публицист и общественный деятель. Один из тех,
-            кто сделал уголовное право гуманнее и ближе к людям.
-          </p>
+        <div class="hero-content">
+          <div>
+            <div class="hero-text">
+              <h1 class="reveal">Александр&nbsp;Фёдорович Кистяковский (1833–1885)</h1>
+              <p class="lead reveal">
+                Профессор права, публицист и общественный деятель. Один из тех,
+                кто сделал уголовное право гуманнее и ближе к людям.
+              </p>
 
-          <ul class="facts">
-            <li class="reveal"><span class="dot">•</span>
-              <span><strong>Против смертной казни.</strong> «Исследование о смертной казни» объяснило, почему казнь не делает общество безопаснее.</span>
-            </li>
-            <li class="reveal"><span class="dot">•</span>
-              <span><strong>Профессор Университета св.&nbsp;Владимира.</strong> Учил смотреть на закон через историю и сравнение.</span>
-            </li>
-            <li class="reveal"><span class="dot">•</span>
-              <span><strong>Хранитель традиции.</strong> Подготовил <em>научное издание</em> свода <em>«Права, по которым судится малороссийский народ»</em>.</span>
-            </li>
-            <li class="reveal"><span class="dot">•</span>
-              <span><strong>Про людей.</strong> Поддерживал гуманную тюремную реформу и помощь подросткам.</span>
-            </li>
-          </ul>
-          <p class="geni-link reveal">
-            <a class="btn--soft" href="https://www.geni.com/people/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D0%9A%D0%B8%D1%81%D1%82%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9/6000000018972375013" target="_blank" rel="noopener">
-              Посмотреть генеалогическое древо на Geni.com
-            </a>
-          </p>
+              <ul class="facts">
+                <li class="reveal"><span class="dot">•</span>
+                  <span><strong>Против смертной казни.</strong> «Исследование о смертной казни» объяснило, почему казнь не делает общество безопаснее.</span>
+                </li>
+                <li class="reveal"><span class="dot">•</span>
+                  <span><strong>Профессор Университета св.&nbsp;Владимира.</strong> Учил смотреть на закон через историю и сравнение.</span>
+                </li>
+                <li class="reveal"><span class="dot">•</span>
+                  <span><strong>Хранитель традиции.</strong> Подготовил <em>научное издание</em> свода <em>«Права, по которым судится малороссийский народ»</em>.</span>
+                </li>
+                <li class="reveal"><span class="dot">•</span>
+                  <span><strong>Про людей.</strong> Поддерживал гуманную тюремную реформу и помощь подросткам.</span>
+                </li>
+              </ul>
+              <div class="hero-text__cta">
+                <a class="btn--soft" href="https://www.geni.com/people/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D0%9A%D0%B8%D1%81%D1%82%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9/6000000018972375013" target="_blank" rel="noopener">
+                  Посмотреть генеалогическое древо на Geni.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <div class="hero-media-nav" aria-label="Родители">
+              <button type="button" class="btn btn--primary hero-nav__btn" data-relation="mother">Мать</button>
+              <button type="button" class="btn btn--primary hero-nav__btn" data-relation="father">Отец</button>
+            </div>
+            <figure class="frame float sepia">
+              <img src="assets/images/kistyakovsky_af.jpg" alt="А. Ф. Кистяковский" />
+              <figcaption class="caption"> Александр&nbsp;Фёдорович Кистяковский. 1833—1885</figcaption>
+            </figure>
+            <div class="hero-media-nav hero-media-nav--bottom" aria-label="Партнёры и дети">
+              <button type="button" class="btn btn--primary hero-nav__btn" data-relation="partners">Партнёры</button>
+              <button type="button" class="btn btn--primary hero-nav__btn" data-relation="children">Дети</button>
+            </div>
+          </div>
         </div>
-
-        <figure class="frame float sepia">
-          <img src="assets/images/kistyakovsky_af.jpg" alt="А. Ф. Кистяковский" />
-          <figcaption class="caption"> Александр&nbsp;Фёдорович Кистяковский. 1833—1885</figcaption>
-        </figure>
       </div>
     </div>
   </header>
@@ -141,7 +155,157 @@
 
   <footer>© Страница о наследии А.&nbsp;Ф. Кистяковского </footer>
 
+  <div id="hero-modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content paper">
+      <button class="modal-close" aria-label="Закрыть">×</button>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
   <script>
+    const makeSvgAvatar = (initials, bg = '#d9cbb8') => `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='160' height='200'><rect width='100%' height='100%' fill='${bg}'/><text x='50%' y='50%' font-family='Cormorant Garamond' font-size='48' fill='#6b4a39' text-anchor='middle' dominant-baseline='middle'>${initials}</text></svg>`)}`;
+
+    const relationData = {
+      mother: [
+        {
+          name: 'Ирина Кистяковская (Эсманская)',
+          years: '1810—?',
+          tagline: 'Домохозяйка',
+          fact: 'Мать Александра Фёдоровича, поддерживала большую семью и воспитала детей в уважении к учёбе и служению обществу.',
+          photo: makeSvgAvatar('ИК'),
+          url: 'Kistyakovskaya_Irina_Esman/index.html'
+        }
+      ],
+      father: [
+        {
+          name: 'Фёдор Кистяковский',
+          years: '1807—?',
+          tagline: 'Священник',
+          fact: 'Отец Александра Фёдоровича; служил священником и передал сыну уважение к образованию и служению людям.',
+          photo: makeSvgAvatar('ФЕ'),
+          url: 'Kistyakovsky_Fedor_Emelyanovich/index.html'
+        }
+      ],
+      partners: [
+        {
+          name: 'Александра Кистяковская (Чубинская)',
+          years: '1846—1920',
+          tagline: 'Домохозяйка',
+          fact: 'Супруга Александра Фёдоровича; воспитала шестерых сыновей и поддерживала мужа в научной и общественной работе.',
+          photo: 'assets/images/Alexandra-Ivanovna_ps.jpg',
+          url: 'Kistyakovskaya_Alexandra_Chubinskaya/index.html'
+        }
+      ],
+      children: [
+        {
+          name: 'Владимир Кистяковский',
+          years: '1865—1952',
+          tagline: 'Химик, академик',
+          fact: 'Основатель электрохимии в России.',
+          photo: 'assets/images/vladimir_alexandrovich_kistyakovsky.jpg',
+          url: 'Kistyakovsky_Vladimir_Alexandrovich/index.html'
+        },
+        {
+          name: 'Богдан Кистяковский',
+          years: '1868—1920',
+          tagline: 'Философ, социолог, правовед',
+          fact: 'Один из авторов сборника «Вехи».',
+          photo: 'assets/images/bogdan_alexandrovich_kistyakovsky.jpg',
+          url: 'Kistyakovsky_Bogdan_Alexandrovich/index.html'
+        },
+        {
+          name: 'Юлий Кистяковский',
+          years: '1872—1920',
+          tagline: 'Юрист, общественный деятель',
+          fact: 'Популяризатор правового просвещения и благотворитель.',
+          photo: 'assets/images/yuly_alexandrovich_kistyakovsky.jpg',
+          url: 'Kistyakovsky_Yuly_Alexandrovich/index.html'
+        },
+        {
+          name: 'Александр Кистяковский',
+          years: '1874—1923',
+          tagline: 'Юрист, общественный деятель',
+          fact: 'Продолжил семейные традиции правоведческой службы.',
+          photo: 'assets/images/alexandr_alexandrovich_kistyakovsky.jpg',
+          url: 'Kistyakovsky_Alexander_Alexandrovich/index.html'
+        },
+        {
+          name: 'Борис Кистяковский',
+          years: '1876—1940',
+          tagline: 'Философ, социолог, правовед',
+          fact: 'Создатель концепции правового государства и гражданского общества.',
+          photo: 'assets/images/boris_alexandrovich_kistyakovsky.jpg',
+          url: 'Kistyakovsky_Boris_Alexandrovich/index.html'
+        },
+        {
+          name: 'Игорь Кистяковский',
+          years: '1876—1940',
+          tagline: 'Юрист, государственный деятель',
+          fact: 'Министр внутренних дел Украинской Державы в 1918 году.',
+          photo: 'assets/images/igor_alexandrovich_kistyakovsky.jpg',
+          url: 'Kistyakovsky_Igor_Alexandrovich/index.html'
+        }
+      ]
+    };
+
+    const heroModal = document.getElementById('hero-modal');
+    const heroModalBody = heroModal.querySelector('.modal-body');
+    const heroModalClose = heroModal.querySelector('.modal-close');
+
+    const openHeroModal = (cards) => {
+      heroModalBody.innerHTML = `
+        <div class="info-card-grid">
+          ${cards.map(person => `
+            <a class="info-card" href="${person.url}">
+              <div class="info-card__text">
+                <h3>${person.name}</h3>
+                <p class="info-card__years">${person.years}</p>
+                <p class="info-card__tagline">${person.tagline}</p>
+                <p class="info-card__fact">${person.fact}</p>
+              </div>
+              <figure class="info-card__photo">
+                <img src="${person.photo}" alt="${person.name}" />
+              </figure>
+            </a>
+          `).join('')}
+        </div>
+      `;
+      heroModal.setAttribute('aria-hidden', 'false');
+      heroModal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeHeroModal = () => {
+      heroModal.setAttribute('aria-hidden', 'true');
+      heroModal.classList.remove('is-open');
+      heroModalBody.innerHTML = '';
+      document.body.style.overflow = '';
+    };
+
+    heroModalClose.addEventListener('click', closeHeroModal);
+    heroModal.addEventListener('click', (event) => {
+      if (event.target === heroModal) {
+        closeHeroModal();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && heroModal.classList.contains('is-open')) {
+        closeHeroModal();
+      }
+    });
+
+    document.querySelectorAll('.hero-nav__btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        const relation = button.dataset.relation;
+        const cards = relationData[relation] || [];
+        if (!cards.length) {
+          closeHeroModal();
+          return;
+        }
+        openHeroModal(cards);
+      });
+    });
+
     const sections = document.querySelectorAll('main section');
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 

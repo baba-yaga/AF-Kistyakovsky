@@ -142,7 +142,7 @@
         const fullPageLink = `${sonId}/index.html`;
         const sonSlug = sonId.split('_')[1].toLowerCase();
 
-        let detailsHtml = '<p>Не удалось загрузить дополнительные сведения.</p>';
+        let detailsHtml = '';
 
         try {
           const response = await fetch(`assets/sons/${sonSlug}.html`);
@@ -153,25 +153,21 @@
           console.error('Ошибка загрузки деталей сына:', error);
         }
 
+        const extraDetails = detailsHtml ? `<div class="info-card__details">${detailsHtml}</div>` : '';
+
         modalBody.innerHTML = `
-          <div class="son-popup-content">
-            <div class="son-popup-text">
-              <h3 style="margin-top:.5rem">${sonName}</h3>
-              <p class="lead">${sonLifespan}</p>
-              <ul class="facts">
-                <li><span class="dot">•</span><span>Род занятий: ${sonOccupation}</span></li>
-                <li><span class="dot">•</span><span>Известен как: ${sonKnownFor}</span></li>
-              </ul>
-              <div class="cluster">
-                <a class="btn btn--primary" href="${fullPageLink}">Подробнее</a>
-              </div>
-              <div class="modal-content-text">${detailsHtml}</div>
+          <a class="info-card" href="${fullPageLink}">
+            <div class="info-card__text">
+              <h3>${sonName}</h3>
+              <p class="info-card__years">${sonLifespan}</p>
+              <p class="info-card__tagline">${sonOccupation}</p>
+              <p class="info-card__fact">${sonKnownFor}</p>
             </div>
-            <figure class="frame sepia son-popup-image">
+            <figure class="info-card__photo">
               <img src="${sonImageSrc}" alt="${sonImageAlt}" />
-              <figcaption class="caption">${sonName} — портрет</figcaption>
             </figure>
-          </div>
+          </a>
+          ${extraDetails}
         `;
 
         sonModal.querySelector('.modal-content').setAttribute('aria-label', sonName);
