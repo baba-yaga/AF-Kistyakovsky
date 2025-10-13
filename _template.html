@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>@@ИМЯ_СЫНА@@ — Семья Кистяковских</title>
+  <title>@@PAGE_TITLE@@</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
 
   <div class="top-nav" id="top">
     <div class="container nav-inner">
-      <a class="brand" href="../../index.html">@@ИНИЦИАЛЫ_СЫНА@@ Кистяковский</a>
+      <a class="brand" href="#page-top">@@BRAND_LABEL@@</a>
       <nav class="nav-links" aria-label="Основное меню">
         <a href="#era">Эпоха</a>
         <a href="#bio">Биография</a>
@@ -25,21 +25,36 @@
     <div class="paper">
       <div class="grain"></div>
       <div class="container hero">
-        <div>
-          <span class="tag">Семейная страница</span>
-          <h1 style="margin-top:.5rem">@@ИМЯ_СЫНА@@ Кистяковский</h1>
-          <p class="lead">@@КРАТКАЯ_ПОДПИСЬ_1_СТРОКА@@</p>
-          <ul class="facts">
-            <li><span class="dot">•</span><span>Родился: @@ГОД_Р@@ — Место: @@МЕСТО_Р@@</span></li>
-            <li><span class="dot">•</span><span>Сфера деятельности: @@СФЕРА@@</span></li>
-            <li><span class="dot">•</span><span>Известен/а как: @@ИЗВЕСТЕН@@</span></li>
-          </ul>
-        </div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <span class="tag">@@TAG_LABEL@@</span>
+            <h1 style="margin-top:.5rem">@@HEADLINE@@</h1>
+            <p class="lead">@@LEAD@@</p>
+            <ul class="facts">
+              <li><span class="dot">•</span><span>@@FACT_1@@</span></li>
+              <li><span class="dot">•</span><span>@@FACT_2@@</span></li>
+              <li><span class="dot">•</span><span>@@FACT_3@@</span></li>
+            </ul>
+            <div class="hero-text__cta">
+              <a class="btn--soft" href="@@CTA_URL@@" target="_blank" rel="noopener">@@CTA_LABEL@@</a>
+            </div>
+          </div>
 
-        <figure class="frame sepia" style="max-width:520px">
-          <img src="../assets/images/@@slug@@.jpg" alt="@@ИМЯ_СЫНА@@ Кистяковский — портрет" />
-          <figcaption class="caption">@@ИМЯ_СЫНА@@ — портрет (замените плейсхолдер)</figcaption>
-        </figure>
+          <div class="hero-media">
+            <div class="hero-media-nav" aria-label="@@RELATION_GROUP_TOP_LABEL@@">
+              <button type="button" class="btn btn--primary hero-nav__btn" data-relation="@@RELATION_TOP_LEFT_KEY@@">@@RELATION_TOP_LEFT_LABEL@@</button>
+              <button type="button" class="btn btn--primary hero-nav__btn" data-relation="@@RELATION_TOP_RIGHT_KEY@@">@@RELATION_TOP_RIGHT_LABEL@@</button>
+            </div>
+            <figure class="frame sepia">
+              <img src="@@HERO_PHOTO@@" alt="@@HERO_ALT@@" />
+              <figcaption class="caption">@@HERO_CAPTION@@</figcaption>
+            </figure>
+            <div class="hero-media-nav hero-media-nav--bottom" aria-label="@@RELATION_GROUP_BOTTOM_LABEL@@">
+              <button type="button" class="btn btn--primary hero-nav__btn" data-relation="@@RELATION_BOTTOM_LEFT_KEY@@">@@RELATION_BOTTOM_LEFT_LABEL@@</button>
+              <button type="button" class="btn btn--primary hero-nav__btn" data-relation="@@RELATION_BOTTOM_RIGHT_KEY@@">@@RELATION_BOTTOM_RIGHT_LABEL@@</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -50,48 +65,161 @@
       <div class="paper">
         <div class="grain"></div>
         <div class="container" style="padding:22px 26px">
-          <h2>Эпоха</h2>
-          <p>@@ЭПОХА_ПАРАГРАФ_1@@</p>
-          <p>@@ЭПОХА_ПАРАГРАФ_2@@</p>
+          <h2>@@SECTION_ERA_TITLE@@</h2>
+          <p>@@ERA_PARAGRAPH_1@@</p>
+          <p>@@ERA_PARAGRAPH_2@@</p>
         </div>
       </div>
     </section>
 
-    <section id="bio" class="section">
-      <article class="paper">
+    <section id="bio" class="section cols">
+      <article class="paper stack">
         <div class="grain"></div>
         <div class="container" style="padding:22px 26px">
-          <h2>Короткая биография</h2>
-          <p>@@ПАРАГРАФ_1@@</p>
-          <p>@@ПАРАГРАФ_2@@</p>
-          <h3 style="margin-top:18px">Основные вехи</h3>
+          <h2>@@SECTION_BIO_TITLE@@</h2>
+          <p>@@BIO_PARAGRAPH_1@@</p>
+          <p>@@BIO_PARAGRAPH_2@@</p>
+          <h3 style="margin-top:18px">@@TIMELINE_TITLE@@</h3>
           <ul>
-            <li><strong>@@ГОД@@:</strong> @@СОБЫТИЕ@@</li>
-            <li><strong>@@ГОД@@:</strong> @@СОБЫТИЕ@@</li>
-            <li><strong>@@ГОД@@:</strong> @@СОБЫТИЕ@@</li>
+            <li><strong>@@TIMELINE_YEAR_1@@:</strong> @@TIMELINE_EVENT_1@@</li>
+            <li><strong>@@TIMELINE_YEAR_2@@:</strong> @@TIMELINE_EVENT_2@@</li>
+            <li><strong>@@TIMELINE_YEAR_3@@:</strong> @@TIMELINE_EVENT_3@@</li>
           </ul>
         </div>
       </article>
+      <figure class="paper frame sepia">
+        <img src="@@BIO_PHOTO@@" alt="@@BIO_ALT@@" />
+        <figcaption class="caption">@@BIO_CAPTION@@</figcaption>
+      </figure>
     </section>
 
     <!-- Источники -->
     <section id="sources" class="section">
       <div class="paper">
         <div class="grain"></div>
-        <div class="container" style="padding:22px 0">
-          <h2>Источники</h2>
+        <div class="container" style="padding:22px 26px">
+          <h2>@@SECTION_SOURCES_TITLE@@</h2>
           <ul>
-            <li>@@НАЗВАНИЕ_1@@ — @@КРАТКО_1@@</li>
-            <li>@@НАЗВАНИЕ_2@@ — @@КРАТКО_2@@</li>
-            <li><a class="btn--link" href="@@ССЫЛКА_1@@" target="_blank" rel="noopener">@@ССЫЛКА_1_НАЗВАНИЕ@@</a></li>
-            <li><a class="btn--link" href="@@ССЫЛКА_2@@" target="_blank" rel="noopener">@@ССЫЛКА_2_НАЗВАНИЕ@@</a></li>
+            <li>@@SOURCE_ENTRY_1@@</li>
+            <li>@@SOURCE_ENTRY_2@@</li>
+            <li><a class="btn--link" href="@@SOURCE_LINK_1_URL@@" target="_blank" rel="noopener">@@SOURCE_LINK_1_LABEL@@</a></li>
+            <li><a class="btn--link" href="@@SOURCE_LINK_2_URL@@" target="_blank" rel="noopener">@@SOURCE_LINK_2_LABEL@@</a></li>
           </ul>
-          <p style="color:var(--muted)">Добавьте ссылки на источники или архивы при наличии.</p>
+          <p style="color:var(--muted); margin-top: 10px;">@@SOURCES_FOOTNOTE@@</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>© Семья Кистяковских · персональная страница</footer>
+  <footer>@@FOOTER_TEXT@@</footer>
+
+  <div id="hero-modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content paper">
+      <button class="modal-close" aria-label="Закрыть">×</button>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    const makeSvgAvatar = (initials, bg = '#d9cbb8') => `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='160' height='200'><rect width='100%' height='100%' fill='${bg}'/><text x='50%' y='50%' font-family='Cormorant Garamond' font-size='48' fill='#6b4a39' text-anchor='middle' dominant-baseline='middle'>${initials}</text></svg>`)}`;
+
+    const relationData = {
+      '@@RELATION_TOP_LEFT_KEY@@': @@RELATION_TOP_LEFT_CARDS@@,
+      '@@RELATION_TOP_RIGHT_KEY@@': @@RELATION_TOP_RIGHT_CARDS@@,
+      '@@RELATION_BOTTOM_LEFT_KEY@@': @@RELATION_BOTTOM_LEFT_CARDS@@,
+      '@@RELATION_BOTTOM_RIGHT_KEY@@': @@RELATION_BOTTOM_RIGHT_CARDS@@
+    };
+
+    const heroModal = document.getElementById('hero-modal');
+    const heroModalBody = heroModal.querySelector('.modal-body');
+    const heroModalClose = heroModal.querySelector('.modal-close');
+
+    const openHeroModal = (cards) => {
+      if (!cards.length) {
+        heroModalBody.innerHTML = '<p>@@RELATION_EMPTY_MESSAGE@@</p>';
+      } else {
+        heroModalBody.innerHTML = `
+          <div class="info-card-grid">
+            ${cards.map(person => `
+              <a class="info-card" href="${person.url}">
+                <div class="info-card__text">
+                  <h3>${person.name}</h3>
+                  <p class="info-card__years">${person.years}</p>
+                  <p class="info-card__tagline">${person.tagline}</p>
+                  <p class="info-card__fact">${person.fact}</p>
+                </div>
+                <figure class="info-card__photo">
+                  <img src="${person.photo}" alt="${person.name}" />
+                </figure>
+              </a>
+            `).join('')}
+          </div>
+        `;
+      }
+      heroModal.setAttribute('aria-hidden', 'false');
+      heroModal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeHeroModal = () => {
+      heroModal.setAttribute('aria-hidden', 'true');
+      heroModal.classList.remove('is-open');
+      heroModalBody.innerHTML = '';
+      document.body.style.overflow = '';
+    };
+
+    heroModalClose.addEventListener('click', closeHeroModal);
+    heroModal.addEventListener('click', (event) => {
+      if (event.target === heroModal) {
+        closeHeroModal();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && heroModal.classList.contains('is-open')) {
+        closeHeroModal();
+      }
+    });
+
+    document.querySelectorAll('.hero-nav__btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        const relation = button.dataset.relation;
+        const cards = relationData[relation] || [];
+        openHeroModal(cards);
+      });
+    });
+
+    // Highlight active navigation link on scroll (existing functionality)
+    const sections = document.querySelectorAll('main section');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    if (sections.length && navLinks.length) {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+              link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`);
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => observer.observe(section));
+
+      window.addEventListener('load', () => {
+        const currentHash = window.location.hash;
+        if (currentHash) {
+          navLinks.forEach(link => {
+            link.classList.toggle('is-active', link.getAttribute('href') === currentHash);
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>

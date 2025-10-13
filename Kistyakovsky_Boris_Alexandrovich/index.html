@@ -12,7 +12,7 @@
 
   <div class="top-nav" id="top">
     <div class="container nav-inner">
-      <a class="brand" href="../../index.html">Б.А.&nbsp;Кистяковский</a>
+      <a class="brand" href="#page-top">Б.А.&nbsp;Кистяковский</a>
       <nav class="nav-links" aria-label="Основное меню">
         <a href="#era">Эпоха</a>
         <a href="#bio">Биография</a>
@@ -25,21 +25,35 @@
     <div class="paper">
       <div class="grain"></div>
       <div class="container hero">
-        <div>
-          <span class="tag">Семейная страница</span>
-          <h1 style="margin-top:.5rem">Борис Александрович Кистяковский</h1>
-          <p class="lead">Философ, социолог, правовед, один из основателей конституционного права в России.</p>
-          <ul class="facts">
-            <li><span class="dot">•</span><span>Родился: 1876 — Место: Киев</span></li>
-            <li><span class="dot">•</span><span>Сфера деятельности: Философия, социология, право</span></li>
-            <li><span class="dot">•</span><span>Известен/а как: Один из авторов сборника «Вехи»</span></li>
-          </ul>
-        </div>
+        <div class="hero-content">
+          <div>
+            <div class="hero-text">
+              <span class="tag">Семейная страница</span>
+              <h1 style="margin-top:.5rem">Борис Александрович Кистяковский (1876—1940)</h1>
+              <p class="lead">Философ, социолог, правовед, один из авторов сборника «Вехи».</p>
+              <ul class="facts">
+                <li><span class="dot">•</span><span>Родился: 1876 — Место: Киев</span></li>
+                <li><span class="dot">•</span><span>Сфера деятельности: Философия, социология, право</span></li>
+                <li><span class="dot">•</span><span>Известен/а как: Теоретик правового государства и гражданского общества</span></li>
+              </ul>
+            </div>
+          </div>
 
-        <figure class="frame sepia" style="max-width:520px">
-          <img src="../assets/images/boris_alexandrovich_kistyakovsky.jpg" alt="Борис Кистяковский — портрет" />
-          <figcaption class="caption">Борис Кистяковский — портрет</figcaption>
-        </figure>
+          <div class="hero-media">
+            <div class="hero-media-nav" aria-label="Родители">
+              <button type="button" class="btn btn--primary hero-nav__btn" data-relation="father">Отец</button>
+              <button type="button" class="btn btn--primary hero-nav__btn" data-relation="mother">Мать</button>
+            </div>
+            <figure class="frame sepia">
+              <img src="../assets/images/boris_alexandrovich_kistyakovsky.jpg" alt="Борис Кистяковский — портрет" />
+              <figcaption class="caption">Борис Кистяковский — портрет</figcaption>
+            </figure>
+            <div class="hero-media-nav hero-media-nav--bottom" aria-label="Партнёры и дети">
+              <button type="button" class="btn btn--primary hero-nav__btn" data-relation="partners">Партнёры</button>
+              <button type="button" class="btn btn--primary hero-nav__btn" data-relation="children">Дети</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -51,45 +65,182 @@
         <div class="grain"></div>
         <div class="container" style="padding:22px 26px">
           <h2>Эпоха</h2>
-          <p>Борис Кистяковский жил в период глубоких социальных и политических потрясений в Российской империи, охватывающий конец XIX и начало XX века. Это было время активного развития философской и правовой мысли, формирования новых политических идеологий и предреволюционных настроений.</p>
-          <p>Его деятельность пришлась на годы, когда формировались основы конституционного права и обсуждались вопросы гражданских свобод, что оказало влияние на его юридическую и общественную работу.</p>
+          <p>Борис Александрович Кистяковский жил на рубеже XIX–XX веков — времени стремительных общественных изменений. Российская империя переживала революции, реформы и переосмысление правовой системы. Научная и философская жизнь пестрила поисками новых общественных форм и смыслов.</p>
+          <p>Именно в этой среде сформировались его идеи о правовом государстве, гражданском обществе и роли права как морального регулятора общественной жизни.</p>
         </div>
       </div>
     </section>
 
-    <section id="bio" class="section">
-      <article class="paper">
+    <!-- Биография -->
+    <section id="bio" class="section cols">
+      <article class="paper stack">
         <div class="grain"></div>
         <div class="container" style="padding:22px 26px">
           <h2>Короткая биография</h2>
-          <p>Борис Александрович Кистяковский (1876—1940) — русский философ, социолог, правовед, один из видных представителей русской либеральной мысли начала XX века. Известен своими работами по философии права и социологии.</p>
-          <p>Его идеи оказали значительное влияние на развитие правовой и политической мысли в России. Он был сторонником правового государства и гражданского общества.</p>
+          <p>Борис Александрович Кистяковский (1876—1940) — русский философ, социолог и правовед. Окончил юридический факультет Киевского университета, затем продолжил обучение в Германии, где увлёкся неокантианством и социологией.</p>
+          <p>Был профессором Московского университета, участвовал в сборнике «Вехи», стоял у истоков российской теории конституционного государства. В эмиграции продолжал научную и публицистическую деятельность.</p>
           <h3 style="margin-top:18px">Основные вехи</h3>
           <ul>
-            <li><strong>1876:</strong> Родился в Киеве.</li>
-            <li><strong>Начало XX века:</strong> Активная научная и публицистическая деятельность.</li>
+            <li><strong>1906</strong> — публикуется очерк «Государство правовое и социалистическое».</li>
+            <li><strong>1909</strong> — участие в знаменитом сборнике «Вехи».</li>
+            <li><strong>1922</strong> — эмигрировал в Чехословакию, преподавал в Русском юридическом факультете в Праге.</li>
           </ul>
         </div>
       </article>
+      <figure class="paper frame sepia">
+        <img src="../assets/images/boris_alexandrovich_kistyakovsky.jpg" alt="Борис Кистяковский — биография" />
+        <figcaption class="caption">Портрет Бориса Александровича, 1910-е годы</figcaption>
+      </figure>
     </section>
 
     <!-- Источники -->
     <section id="sources" class="section">
       <div class="paper">
         <div class="grain"></div>
-        <div class="container" style="padding:22px 0">
+        <div class="container" style="padding:22px 26px">
           <h2>Источники</h2>
           <ul>
-            <li>«Философия права» — монография.</li>
-            <li>«Социальные основы права» — сборник статей.</li>
-            <li>(Информация уточняется)</li>
+            <li>Б. А. Кистяковский. «Социальные науки и право». — Статьи 1900–1917 гг.</li>
+            <li>Сборник «Вехи» (1909): статьи о кризисе русской интеллигенции.</li>
+            <li><a class="btn--link" href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D1%81%D1%82%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9,_%D0%91%D0%BE%D1%80%D0%B8%D1%81_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%B8%D1%87" target="_blank" rel="noopener">Статья о Борисе Кистяковском на Википедии</a></li>
           </ul>
-          <p style="color:var(--muted)">Добавьте ссылки на источники или архивы при наличии.</p>
+          <p style="color:var(--muted); margin-top:10px;">Если у вас есть дополнительные материалы, напишите редакции проекта.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer>© Семья Кистяковских · персональная страница</footer>
+
+  <div id="hero-modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content paper">
+      <button class="modal-close" aria-label="Закрыть">×</button>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    const makeSvgAvatar = (initials, bg = '#d9cbb8') => `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='160' height='200'><rect width='100%' height='100%' fill='${bg}'/><text x='50%' y='50%' font-family='Cormorant Garamond' font-size='48' fill='#6b4a39' text-anchor='middle' dominant-baseline='middle'>${initials}</text></svg>`)}`;
+
+    const relationData = {
+      mother: [
+        {
+          name: 'Александра Кистяковская (Чубинская)',
+          years: '1846—1920',
+          tagline: 'Домохозяйка',
+          fact: 'Мать Бориса Александровича.',
+          photo: '../assets/images/Alexandra-Ivanovna_ps.jpg',
+          url: '../../Kistyakovskaya_Alexandra_Chubinskaya/index.html'
+        }
+      ],
+      father: [
+        {
+          name: 'Александр Фёдорович Кистяковский',
+          years: '1833–1885',
+          tagline: 'Профессор права, публицист',
+          fact: 'Отец Бориса Александровича.',
+          photo: '../assets/images/kistyakovsky_af.jpg',
+          url: '../../index.html'
+        }
+      ],
+      partners: [
+        // No specific partner data for Boris provided yet
+      ],
+      children: [
+        // No specific children data for Boris provided yet
+      ]
+    };
+
+    const heroModal = document.getElementById('hero-modal');
+    const heroModalBody = heroModal.querySelector('.modal-body');
+    const heroModalClose = heroModal.querySelector('.modal-close');
+
+    const openHeroModal = (cards) => {
+      heroModalBody.innerHTML = `
+        <div class="info-card-grid">
+          ${cards.map(person => `
+            <a class="info-card" href="${person.url}">
+              <div class="info-card__text">
+                <h3>${person.name}</h3>
+                <p class="info-card__years">${person.years}</p>
+                <p class="info-card__tagline">${person.tagline}</p>
+                <p class="info-card__fact">${person.fact}</p>
+              </div>
+              <figure class="info-card__photo">
+                <img src="${person.photo}" alt="${person.name}" />
+              </figure>
+            </a>
+          `).join('')}
+        </div>
+      `;
+      heroModal.setAttribute('aria-hidden', 'false');
+      heroModal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeHeroModal = () => {
+      heroModal.setAttribute('aria-hidden', 'true');
+      heroModal.classList.remove('is-open');
+      heroModalBody.innerHTML = '';
+      document.body.style.overflow = '';
+    };
+
+    heroModalClose.addEventListener('click', closeHeroModal);
+    heroModal.addEventListener('click', (event) => {
+      if (event.target === heroModal) {
+        closeHeroModal();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && heroModal.classList.contains('is-open')) {
+        closeHeroModal();
+      }
+    });
+
+    document.querySelectorAll('.hero-nav__btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        const relation = button.dataset.relation;
+        const cards = relationData[relation] || [];
+        if (!cards.length) {
+          closeHeroModal();
+          return;
+        }
+        openHeroModal(cards);
+      });
+    });
+
+    // Highlight active navigation link on scroll (existing functionality)
+    const sections = document.querySelectorAll('main section');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    if (sections.length && navLinks.length) {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+              link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`);
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => observer.observe(section));
+
+      window.addEventListener('load', () => {
+        const currentHash = window.location.hash;
+        if (currentHash) {
+          navLinks.forEach(link => {
+            link.classList.toggle('is-active', link.getAttribute('href') === currentHash);
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
